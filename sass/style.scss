@@ -12,6 +12,7 @@ body{
     height: 50vh;
     margin: 0;
     background-color: #1a1a1a;
+    
 }
 
 .Sphere{
@@ -32,8 +33,27 @@ body{
     }
 }
 
+@keyframes FloorMove {
+    from{
+        transform: translateX(10%);
+    }
+    to{
+        transform: translateX(-23.5%);
+    }
+}
+
 .Floor{
     background-image:linear-gradient(to bottom, #20489a, #1a1a1a);
-    width: 100%;
+    animation: FloorMove 2s linear infinite;
+    width: 200%;
     flex-grow: 1;
+    border-top: 3px dotted #20489a;
+    display: flex;
+    justify-content: space-evenly;
+    div{
+        margin-top: -3px;
+        width: 10px;
+        height: 100%;
+        background-image:linear-gradient(to bottom, white, transparent) ;
+    }
 }
